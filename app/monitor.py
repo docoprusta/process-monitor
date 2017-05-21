@@ -78,7 +78,7 @@ class CpuMonitor(Monitor):
         print("-------------------------")
 
     def set_measured_values(self):
-        for _ in range(self.length+1):
+        for _ in range(self.length):
             cpu_percentage = self.process.cpu_percent(interval=self.frequency)
             self.measured_values.append(cpu_percentage)
 
@@ -116,13 +116,14 @@ class MemoryMonitor(Monitor):
         try:
             start_time = time.time()
             while True:
-                if len(self.measured_values) > self.length:
-                    self.length_reached()
                     
                 if time.time() - start_time >= self.frequency:
                     self.measured_values.append(
                         self.process.memory_info()[0])
                     start_time = time.time()
+
+                if len(self.measured_values) >= self.length:
+                    self.length_reached()
 
                 time.sleep(.001)
         except psutil.NoSuchProcess:
