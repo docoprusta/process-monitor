@@ -62,112 +62,133 @@ Process name: cinnamon
 -------------------------
 
 -------------------------
-Sun May 21 15:55:45 2017
+Sun May 21 16:24:34 2017
 -------------------------
          Memory
 -------------------------
-minimum usage:   225 MB
-maximum usage:   225 MB
-avarage usage:   225 MB
+minimum usage:   227 MB
+maximum usage:   227 MB
+avarage usage:   227 MB
 -------------------------
 
 -------------------------
-Sun May 21 15:55:45 2017
+Sun May 21 16:24:34 2017
 -------------------------
         Total CPU
 -------------------------
-minimum usage:   0.68 %
-maximum usage:   1.43 %
-avarage usage:   0.97 %
--------------------------
-
--------------------------
-Sun May 21 15:56:45 2017
--------------------------
-         Memory
--------------------------
-minimum usage:   225 MB
-maximum usage:   225 MB
-avarage usage:   225 MB
--------------------------
-
--------------------------
-Sun May 21 15:56:55 2017
--------------------------
-        Total CPU
--------------------------
-minimum usage:   0.17 %
-maximum usage:   1.43 %
+minimum usage:   0.10 %
+maximum usage:   0.55 %
 avarage usage:   0.32 %
 -------------------------
 
 -------------------------
-Sun May 21 15:57:45 2017
+Sun May 21 16:25:24 2017
 -------------------------
          Memory
 -------------------------
-minimum usage:   225 MB
-maximum usage:   225 MB
-avarage usage:   225 MB
+minimum usage:   227 MB
+maximum usage:   227 MB
+avarage usage:   227 MB
 -------------------------
 
 -------------------------
-Sun May 21 15:58:05 2017
+Sun May 21 16:25:34 2017
 -------------------------
         Total CPU
 -------------------------
-minimum usage:   0.17 %
-maximum usage:   1.43 %
-avarage usage:   0.24 %
+minimum usage:   0.10 %
+maximum usage:   2.17 %
+avarage usage:   1.16 %
 -------------------------
 
 -------------------------
-Sun May 21 15:58:45 2017
+Sun May 21 16:26:14 2017
 -------------------------
          Memory
 -------------------------
-minimum usage:   225 MB
-maximum usage:   225 MB
-avarage usage:   225 MB
+minimum usage:   227 MB
+maximum usage:   227 MB
+avarage usage:   227 MB
 -------------------------
 
 -------------------------
-Sun May 21 15:59:15 2017
+Sun May 21 16:26:34 2017
 -------------------------
         Total CPU
 -------------------------
-minimum usage:   0.17 %
-maximum usage:   1.43 %
-avarage usage:   0.23 %
+minimum usage:   0.10 %
+maximum usage:   2.17 %
+avarage usage:   0.91 %
 -------------------------
 
 -------------------------
-Sun May 21 15:59:45 2017
+Sun May 21 16:27:04 2017
 -------------------------
          Memory
 -------------------------
-minimum usage:   225 MB
-maximum usage:   225 MB
-avarage usage:   225 MB
+minimum usage:   227 MB
+maximum usage:   228 MB
+avarage usage:   227 MB
 -------------------------
 
 -------------------------
-Sun May 21 16:00:25 2017
+Sun May 21 16:27:34 2017
 -------------------------
         Total CPU
 -------------------------
-minimum usage:   0.17 %
-maximum usage:   1.43 %
-avarage usage:   0.26 %
+minimum usage:   0.10 %
+maximum usage:   2.25 %
+avarage usage:   1.17 %
 -------------------------
 
 -------------------------
-Sun May 21 16:00:45 2017
+Sun May 21 16:27:54 2017
 -------------------------
          Memory
 -------------------------
-minimum usage:   225 MB
-maximum usage:   225 MB
-avarage usage:   225 MB
+minimum usage:   227 MB
+maximum usage:   230 MB
+avarage usage:   230 MB
 -------------------------
+
+-------------------------
+Sun May 21 16:28:34 2017
+-------------------------
+        Total CPU
+-------------------------
+minimum usage:   0.10 %
+maximum usage:   2.25 %
+avarage usage:   0.92 %
+-------------------------
+
+-------------------------
+Sun May 21 16:28:44 2017
+-------------------------
+         Memory
+-------------------------
+minimum usage:   227 MB
+maximum usage:   230 MB
+avarage usage:   230 MB
+-------------------------
+
+-------------------------
+Sun May 21 16:29:34 2017
+-------------------------
+         Memory
+-------------------------
+minimum usage:   227 MB
+maximum usage:   230 MB
+avarage usage:   230 MB
+-------------------------
+
+-------------------------
+Sun May 21 16:29:34 2017
+-------------------------
+        Total CPU
+-------------------------
+minimum usage:   0.10 %
+maximum usage:   2.25 %
+avarage usage:   1.05 %
+-------------------------
+
 ```
