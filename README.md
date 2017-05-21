@@ -52,9 +52,11 @@ the first column contains the pid
 Technically the program create a log in every < freqency > * < length > second. If you use the default values the program creates log in every minute (because `frequency = 10` and `length = 6` so check the process in every 10 seconds and creates log after 10 checks)
 
 **example output: **
+
 `python processmonitor.py -p 3539`
 
-`
+
+```
 -------------------------
 Process name: cinnamon
 -------------------------
@@ -168,4 +170,4 @@ minimum usage:   225 MB
 maximum usage:   225 MB
 avarage usage:   225 MB
 -------------------------
-`
+```
