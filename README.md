@@ -10,10 +10,10 @@ Works in linux and windows.
 `pip install psutil`
 
 **How to get pid of running processes:**
-**Windows: **
+**Windows:**
 Task manager (ctrl+shif+esc) --> details page pid column
 
-**Linux: **
+**Linux:**
 
 `pidof <process name>`
 
@@ -53,6 +53,8 @@ Technically the program create a log in every < freqency > * < length > second. 
 
 **example output: **
 `python processmonitor.py -p 3539`
+
+`
 -------------------------
 Process name: cinnamon
 -------------------------
@@ -166,3 +168,4 @@ minimum usage:   225 MB
 maximum usage:   225 MB
 avarage usage:   225 MB
 -------------------------
+`
