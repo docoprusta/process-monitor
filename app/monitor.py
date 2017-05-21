@@ -6,7 +6,7 @@ import threading
 import os
 
 
-class Monitor(object):    
+class Monitor(object):
     def __init__(self):
         self.min_usage = 0.0
         self.max_usage = 0.0
@@ -72,9 +72,12 @@ class CpuMonitor(Monitor):
         self.print_date()
         print("        Total CPU")
         print("-------------------------")
-        print("minimum usage:   {0:.2f} %".format(self.min_usage/psutil.cpu_count()))
-        print("maximum usage:   {0:.2f} %".format(self.max_usage/psutil.cpu_count()))
-        print("avarage usage:   {0:.2f} %".format(self.avg_usage/psutil.cpu_count()))
+        print("minimum usage:   {0:.2f} %".format(
+            self.min_usage / psutil.cpu_count()))
+        print("maximum usage:   {0:.2f} %".format(
+            self.max_usage / psutil.cpu_count()))
+        print("avarage usage:   {0:.2f} %".format(
+            self.avg_usage / psutil.cpu_count()))
         print("-------------------------")
 
     def set_measured_values(self):
@@ -98,7 +101,7 @@ class MemoryMonitor(Monitor):
 
     @staticmethod
     def byte_to_mb(value):
-        return value/1000000
+        return value / 1000000
 
     def print_values(self):
         self.print_date()
@@ -114,15 +117,15 @@ class MemoryMonitor(Monitor):
 
     def measure_usage(self):
         try:
+            self.measured_values.append(self.process.memory_info()[0])
             start_time = time.time()
             while True:
-                    
+
                 if time.time() - start_time >= self.frequency:
-                    self.measured_values.append(
-                        self.process.memory_info()[0])
+                    self.measured_values.append(self.process.memory_info()[0])
                     start_time = time.time()
 
-                if len(self.measured_values) >= self.length:
+                if len(self.measured_values) > self.length:
                     self.length_reached()
 
                 time.sleep(.001)
