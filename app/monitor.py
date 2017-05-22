@@ -15,6 +15,14 @@ class Monitor(object):
         self.process = psutil.Process(self.process_id)
         self.process_name = self.process.name()
 
+    @staticmethod
+    def factory(type):
+        if type == 'CpuMonitor':
+            return CpuMonitor()
+        elif type == 'MemoryMonitor':
+            return MemoryMonitor()
+        assert 0, "Bad monitor creation: " + type
+
     @abstractmethod
     def start(self):
         pass
@@ -34,8 +42,10 @@ class Monitor(object):
 
     def get_min_usage(self):
         min_measured_value = min(self.measured_values)
-        if min_measured_value < self.min_usage or (self.min_usage == 0.0 and min_measured_value != 0.0):
-            return min(self.measured_values)
+        if ((min_measured_value < self.min_usage) \
+            or (self.min_usage == 0.0)) \
+            and min_measured_value != 0.0:
+            return min_measured_value
         return self.min_usage
 
     def print_process_name(self):
@@ -81,9 +91,8 @@ class CpuMonitor(Monitor):
         print("-------------------------")
 
     def set_measured_values(self):
-        for _ in range(self.length):
-            cpu_percentage = self.process.cpu_percent(interval=self.frequency)
-            self.measured_values.append(cpu_percentage)
+        self.measured_values = \
+            [ self.process.cpu_percent(interval=self.frequency)  for _ in range(self.length) ]
 
     def measure_usage(self):
         try:
@@ -115,13 +124,18 @@ class MemoryMonitor(Monitor):
     def start(self):
         threading.Thread(target=self.measure_usage).start()
 
+    def is_time_expired(self, start_time):
+        if time.time() - start_time >= self.frequency:
+            return True
+        return False
+
     def measure_usage(self):
         try:
             self.measured_values.append(self.process.memory_info()[0])
             start_time = time.time()
             while True:
 
-                if time.time() - start_time >= self.frequency:
+                if self.is_time_expired(start_time):
                     self.measured_values.append(self.process.memory_info()[0])
                     start_time = time.time()
 

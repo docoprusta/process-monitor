@@ -40,8 +40,8 @@ if __name__ == '__main__':
         Monitor.frequency = frequency
         Monitor.length = length
 
-        cpu_monitor = CpuMonitor()
-        memory_monitor = MemoryMonitor()
+        cpu_monitor = Monitor.factory('CpuMonitor')
+        memory_monitor = Monitor.factory('MemoryMonitor')
 
         cpu_monitor.print_process_name()
 
